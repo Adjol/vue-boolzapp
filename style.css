@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100dvh;
+    position: relative;
+}
+
+.back_top {
+    height: 10%;
+    background-color: green;
+}
+
+.back_bottom {
+    height: 90%;
+    background-color: gray;
+}
+
+.flex_it {
+    height: 90%;
+    width: 85%;
+    background-color: white;
+
+
+    position: absolute;
+    top: 30px;
+    right: calc(15% / 2);
+}
