@@ -11,21 +11,75 @@
 
 .back_top {
     height: 10%;
-    background-color: green;
+    background-color: #009688;
 }
 
 .back_bottom {
     height: 90%;
-    background-color: gray;
+    background-color: #d8dbd5;
 }
+
 
 .flex_it {
     height: 90%;
     width: 85%;
     background-color: white;
-
-
     position: absolute;
     top: 30px;
     right: calc(15% / 2);
+}
+#app {
+    height: 100%;
+    display: flex;
+}
+
+
+.sidebar {
+    width: 20%;
+    height: 100%;
+    background-color: beige;
+
+}
+
+.conversation {
+    width: 80%;
+    height: 100%;
+    background-color: aqua;
+}
+
+
+#my_profile {
+    display: flex;
+    align-items: center;
+    background-color: #eaeaea;
+    justify-content: space-between;
+    overflow: hidden;
+
+}
+
+.avatar {
+    width: 50px;
+    height:50px;
+    object-fit: contain;
+    margin: 0 10px;
+
+}
+.avatar img {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.card_left_info {
+    display: flex;
+    align-items: center;
+}
+
+.right_action * {
+    margin: 0 10px;
+    color: rgb(152, 152, 152);
+}
+
+.contacts_overflow {
+    height: 100%;
+    overflow: auto;
 }
