@@ -4,7 +4,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-            visualMessage: null,
+
+            sent: null,
             myProfile: [
                 {
                     name: 'adjol',
@@ -183,7 +184,9 @@ createApp({
 
         courrentChat(index) {
             this.visualMessage = index;
-          },
+        },
+
+
 
     },
 

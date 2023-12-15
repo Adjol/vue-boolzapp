@@ -95,3 +95,34 @@
 .card:hover {
     background-color: rgb(241, 241, 241);
 }
+
+
+.conversation {
+    display: flex;
+    align-items: end;
+}
+.messages {
+    width: 100%;
+}
+.sent-message {
+    width: fit-content;
+    background-color: #d5f9ba;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+    text-align: right;
+}
+
+.received-message {
+    width: fit-content;
+    background-color: #fff;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 5px;
+}
+
+.to_flex_right {
+    display: flex;
+    justify-content: end;
+}
+
