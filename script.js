@@ -4,7 +4,8 @@ const { createApp } = Vue;
 createApp({
     data() {
         return {
-
+            newMessage: "",
+            visualMessage: null,
             sent: null,
             myProfile: [
                 {
@@ -186,7 +187,14 @@ createApp({
             this.visualMessage = index;
         },
 
-
+        sendMessage() {
+            let i = this.visualMessage;
+            this.contacts[i].messages.push({
+                message: this.newMessage,
+                status: 'sent'
+            });
+            this.newMessage = "";
+        },
 
     },
 

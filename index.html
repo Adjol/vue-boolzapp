@@ -21,8 +21,8 @@
     <div class="container">
         <div class="back_top"></div>
 
-
-        <div class="flex_it">
+        <!--  -->
+        <div class="center_app">
             <div id="app">
 
 
@@ -71,32 +71,59 @@
                     <div class="messages" v-for="(contact, index) in contacts" :key="index" v-show="index === visualMessage">
                         
                         <div  v-for="message in contact.messages" >
-                            <!-- metto i messaggi inviati a destra -->
-                          <div class="to_flex_right" :class="{'to_flex_right' : message.status === 'sent'}">
-                            <!-- display dei messaggi inviati -->
 
-                              <div class="sent_messages" v-if="message.status === 'sent'" :class="{'sent-message': message.status === 'sent'}">{{message.message}}
-                              
-                              </div>
-                          </div>
-                            <!-- display dei messaggi -->
 
-                          <div class="received_messages" v-if="message.status === 'received'" :class="{'received-message' : message.status === 'received'}">{{message.message}} </div>
+                            <!-- metto a destra i messaggi inviati -->
+                            <div class="to_flex_right" :class="{'to_flex_right' : message.status === 'sent'}">
 
+                                <!-- display dei messaggi inviati -->
+
+                                <div class="sent_messages" v-if="message.status === 'sent'" :class="{'sent-message': message.status === 'sent'}">{{message.message}} 
+                                    <div>{{message.date}}</div>
+
+
+                                </div>
+                            </div>
+                            <!-- display dei messaggi ricevuti-->
+
+                            <div class="received_messages" v-if="message.status === 'received'" :class="{'received-message' : message.status === 'received'}">    {{message.message}} 
+
+                              <div>{{message.date}}</div>
+
+                            </div>
+                          
+                          
+
+                          
+
+
+
+                            
+
+                        
+
+                        
                         </div>
+                        <div id="send_new_message">
+<!-- 
+                            <div id="text_area" contenteditable="true" v-model="newMessage" placeholder="Type your message">
 
-                        
 
-                        
+                            </div> -->
+                            <input type="text" v-model="newMessage" placeholder="Type your message">
+
+                            <button @click="sendMessage">Invia</button>
                         </div>
                     </div>
 
-                    <div class="sent_messages"> </div>
+                    
+
+                    
 
                     
 
                 </div>
-
+                
 
             
             </div>

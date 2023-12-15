@@ -20,7 +20,7 @@
 }
 
 
-.flex_it {
+.center_app {
     height: 90%;
     width: 85%;
     background-color: white;
@@ -126,3 +126,14 @@
     justify-content: end;
 }
 
+#send_new_message {
+    display: flex;
+}
+
+#text_area {
+    background-color: white;
+    width: calc(100% - 100px);
+    height: 3rem;
+    line-height: 3rem;
+    margin: 10px 5px;
+}
