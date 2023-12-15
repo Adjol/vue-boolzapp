@@ -47,8 +47,9 @@
 
                         <!-- contacts area -->
                     <div class="contacts_overflow">
-                        <div class="contacts" v-for="contact in contacts">
-                            <div class="card">
+
+                        <div class="contacts" v-for="(contact, index) in contacts" :key="index">
+                            <div class="card" @click="courrentChat(index)">
                                 <div class="card_left_info">
                                     <div class="avatar">
                                         <img :src="contact.avatar" alt="profile photo">
@@ -65,16 +66,21 @@
                 </div>
 
 
+                <div class="conversation">
+
+                    <div class="recived_messages" v-for="(contact, index) in contacts" :key="index" v-show="index === visualMessage">
+                        
+                      <div v-for="(message) in contact.messages" >
+                        <div class="message">
+                          {{ message.message }}
+                        </div>
+                        <div class="message-date">{{ message.date }}</div>
+                      </div>
+                    </div>
+
+                </div>
 
 
-
-                <div class="conversation"></div>
-
-
-
-                <!-- <div class="ciao" v-for="scorri in arr">
-                    {{scorri}}
-                </div> -->
             
             </div>
         </div>

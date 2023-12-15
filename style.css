@@ -83,3 +83,15 @@
     height: 100%;
     overflow: auto;
 }
+
+.card {
+    height: 4rem;
+    background-color: white;
+    border-top: 1px solid rgb(201, 201, 201);
+
+    display: flex;
+    align-items: center;
+}
+.card:hover {
+    background-color: rgb(241, 241, 241);
+}
