@@ -7,6 +7,7 @@ createApp({
             newMessage: "",
             visualMessage: null,
             sent: null,
+            
             myProfile: [
                 {
                     name: 'adjol',
@@ -211,16 +212,22 @@ createApp({
                 });
             }, 1000);
 
+            this.$nextTick(() => {
+                const messagesContainer = document.getElementById('messages-container');
+                messagesContainer.scrollTop = messagesContainer.scrollHeight;
+            });
+
+
+
 
         },
-
-
-
+       
+       
+        
     },
 
 
     mounted() {
-
-
+ 
     }
 }).mount("#app");

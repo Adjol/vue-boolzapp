@@ -7,6 +7,7 @@
 .container {
     height: 100dvh;
     position: relative;
+    overflow: hidden;
 }
 
 .back_top {
@@ -23,7 +24,7 @@
 .center_app {
     height: 90dvh;
     width: 85%;
-    background-color: white;
+
     position: absolute;
     top: 30px;
     right: calc(15% / 2);
@@ -37,13 +38,12 @@
 .sidebar {
     width: 30%;
     height: 100%;
-    background-color: beige;
-
+    background-color: white;
 }
 
 .conversation {
     width: 70%;
-    max-height: 90dvh;
+    min-height: 100%;
     background-color: aqua;
     display: flex;
     align-items: end;
@@ -56,7 +56,7 @@
     background-color: #eaeaea;
     justify-content: space-between;
     overflow: hidden;
-    margin: .5rem 0;
+    padding: .5rem 0;
 
 }
 
@@ -147,4 +147,17 @@
     max-height: 90dvh;
     overflow: auto; 
     scroll-behavior: smooth;
+}
+
+.contact_info {
+    height: 5rem;
+    width: 59.5%;
+    background-color: gray;
+    border-left: 1px solid rgb(82, 82, 82);
+    position: fixed;
+    top: 30px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    background-color: rgb(233, 233, 233);
 }
