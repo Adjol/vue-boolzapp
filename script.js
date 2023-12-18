@@ -186,15 +186,35 @@ createApp({
         courrentChat(index) {
             this.visualMessage = index;
         },
+    
 
         sendMessage() {
+
             let i = this.visualMessage;
+
+
             this.contacts[i].messages.push({
                 message: this.newMessage,
-                status: 'sent'
+                status: 'sent',
+                date: new Date().toLocaleString(),
             });
+
+
             this.newMessage = "";
+
+            // Simulare la risposta del bot dopo 2 secondi
+            setTimeout(() => {
+                this.contacts[i].messages.push({
+                    message: 'Ok',
+                    status: 'received',
+                    date: new Date().toLocaleString(),
+                });
+            }, 1000);
+
+
         },
+
+
 
     },
 

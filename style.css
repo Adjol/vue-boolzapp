@@ -10,18 +10,18 @@
 }
 
 .back_top {
-    height: 10%;
+    height: 4rem;
     background-color: #009688;
 }
 
 .back_bottom {
-    height: 90%;
+    height: calc(100% - 4rem);
     background-color: #d8dbd5;
 }
 
 
 .center_app {
-    height: 90%;
+    height: 90dvh;
     width: 85%;
     background-color: white;
     position: absolute;
@@ -35,16 +35,18 @@
 
 
 .sidebar {
-    width: 20%;
+    width: 30%;
     height: 100%;
     background-color: beige;
 
 }
 
 .conversation {
-    width: 80%;
-    height: 100%;
+    width: 70%;
+    max-height: 90dvh;
     background-color: aqua;
+    display: flex;
+    align-items: end;
 }
 
 
@@ -54,6 +56,7 @@
     background-color: #eaeaea;
     justify-content: space-between;
     overflow: hidden;
+    margin: .5rem 0;
 
 }
 
@@ -97,10 +100,7 @@
 }
 
 
-.conversation {
-    display: flex;
-    align-items: end;
-}
+
 .messages {
     width: 100%;
 }
@@ -128,6 +128,9 @@
 
 #send_new_message {
     display: flex;
+    position: sticky;
+    bottom: 0;
+    z-index: 1;
 }
 
 #text_area {
@@ -136,4 +139,12 @@
     height: 3rem;
     line-height: 3rem;
     margin: 10px 5px;
+    flex-grow: 1;
+}
+
+#messages-container {
+    width: 100%;
+    max-height: 90dvh;
+    overflow: auto; 
+    scroll-behavior: smooth;
 }
